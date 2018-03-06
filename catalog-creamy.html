@@ -18,11 +18,11 @@
           </a>
 
           <ul class="site-navigation">
-            <li><a class="catalog active" href="#" title="Каталог товаров">Каталог</a>
+            <li><a class="sitenav-catalog active-page" href="#" title="Каталог товаров">Каталог</a>
 
-              <ul class="catalog-sub-menu">
-                <li><a href="#" title="Новые товары">Новинки</a></li>
-                <li><a class="active" href="#" title="Выбрать сливочное">Сливочное</a></li>
+              <ul class="catalog-submenu">
+                <li><a class="submenu-newproducts" href="#" title="Новые товары">Новинки</a></li>
+                <li><a class="active-page">Сливочное</a></li>
                 <li><a href="#" title="Выбрать щербет">Щербеты</a></li>
                 <li><a href="#" title="Выбрать фруктовый лед">Фруктовый лед</a></li>
                 <li><a href="#" title="Выбрать мелорин">Мелорин</a></li>
@@ -56,47 +56,62 @@
             <section class="shoppingcart">
               <h2 class="visually-hidden">Корзина</h2>
 
-              <ul class="shoppingcart-list">
+              <table class="shoppingcart-table">
+                <tr class="cart-item">
 
-                <li class="cart-item">
+                  <td>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">x</a>
+                  </td>
 
-                  <button class="cartitem-remove-btn" type="button">x</button>
+                  <td>
+                    <a class="cartitem-title" href="#" title="Подробнее о товаре">Пломбир с апельсиновым джемом</a>
+                  </td>
 
-                  <a class="cartitem-title" href="#" title="">Пломбир с апельсиновым джемом</a>
+                  <td>
+                    <p class="cartitem-orderinfo">
+                      1,5 кг х
+                      <span class="item-price">200</span>
+                      руб.
+                    </p>
+                  </td>
 
-                  <p class="cartitem-orderinfo">
-                    1,5 кг х
-                    <span class="item-price">200</span>
-                    руб.
-                  </p>
+                  <td>
+                    <p class="cartitem-orderprice">
+                      <span class="cartitem-totalprice">300</span>
+                      руб.
+                    </p>
+                  </td>
 
-                  <p class="cartitem-orderprice">
-                    <span class="cartitem-totalprice">300</span>
-                    руб.
-                  </p>
+                </tr>
 
-                </li>
+                <tr class="cart-item">
 
-                <li class="cart-item">
+                  <td>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">x</a>
+                  </td>
 
-                  <button class="cartitem-remove-btn" type="button">x</button>
+                  <td>
+                    <a class="cartitem-title" href="#" title="Подробнее о товаре">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  </td>
 
-                  <a class="cartitem-title" href="#" title="">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  <td>
+                    <p class="cartitem-orderinfo">
+                      1,5 кг х
+                      <span class="cartitem-price">300</span>
+                      руб.
+                    </p>
+                  </td>
 
-                  <p class="cartitem-orderinfo">
-                    1,5 кг х
-                    <span class="cartitem-price">300</span>
-                    руб.
-                  </p>
+                  <td>
+                    <p class="cartitem-orderprice">
+                      <span class="cartitem-totalprice">450</span>
+                      руб.
+                    </p>
+                  </td>
 
-                  <p class="cartitem-orderprice">
-                    <span class="cartitem-totalprice">450</span>
-                    руб.
-                  </p>
+                </tr>
 
-                </li>
-
-              </ul> <!-- .shoppingcart-list -->
+              </table> <!-- .shoppingcart-table -->
 
               <p class="shoppingcart-total">
                 Итого:
@@ -491,13 +506,13 @@
         <h2 class="visually-hidden">Постраничная навигация</h2>
 
         <ul class="pagination-list">
-          <li><a class="prev inactive" href="#">&lt;</a>
-          <li><a class="current" href="#">1</a>
+          <li><a class="pagination-prev pagination-inactive">&lt;</a>
+          <li><a class="pagination-current">1</a>
           <li><a href="#">2</a>
           <li><a href="#">3</a>
           <li><a href="#">4</a>
           <li><a href="#">5</a>
-          <li><a class="next" href="#">&gt;</a>
+          <li><a class="pagination-next" href="#">&gt;</a>
         </ul>
 
       </section> <!-- .pagination -->
