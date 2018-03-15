@@ -18,49 +18,60 @@
           </a>
 
           <ul class="site-navigation">
-            <li><a class="sitenav-catalog active-page" href="#" title="Каталог товаров">Каталог</a>
+            <li><a class="sitenav-catalog active-page" href="#">Каталог</a>
 
               <ul class="catalog-submenu">
-                <li><a class="submenu-newproducts" href="#" title="Новые товары">Новинки</a></li>
+                <li><a class="submenu-newproducts" href="#">Новинки</a></li>
                 <li><a class="active-page">Сливочное</a></li>
-                <li><a href="#" title="Выбрать щербет">Щербеты</a></li>
-                <li><a href="#" title="Выбрать фруктовый лед">Фруктовый лед</a></li>
-                <li><a href="#" title="Выбрать мелорин">Мелорин</a></li>
+                <li><a href="#">Щербеты</a></li>
+                <li><a href="#">Фруктовый лед</a></li>
+                <li><a href="#">Мелорин</a></li>
               </ul> <!-- .catalog-sub-menu -->
             </li> <!-- .catalog -->
 
-            <li><a href="#" title="Узнать о доставке">Доставка и оплата</a></li>
-            <li><a href="#" title="Узнать о компании">О Компании</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">О Компании</a></li>
           </ul>
 
 
           <div class="user-navigation">
-            <a href="#" class="search-btn light-btn" title="Поиск по сайту">Поиск</a>
-            <!-- <form action="https://echo.htmlacademy.ru" method="get">
-              <input type="search" name="site-search" value="Что ищем?">
-            </form> -->
+            <a href="#" class="search-btn light-btn">Поиск</a>
 
-            <a href="#" class="signin-btn light-btn" title="Вход в личный кабинет">Вход</a>
-            <!-- <form class="signin-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="email" name="user-email" value="Электронная почта">
-              <input type="password" name="user-password" value="Пароль">
-              <button class="submit-btn bright-btn" type="submit">Войти</button>
-              <a href="#" class="signin-form-link recovery-link">Забыли пароль?</a>
-              <a href="#" class="signin-form-link signup-link">Новая регистрация</a>
-            </form> -->
+            <form class="usernav-search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="site-search-id">Поиск товаров по сайту</label>
+              <input type="search" name="site-search" id="site-search-id" placeholder="Что ищем?">
+            </form>
 
-            <a class="shoppingcart-btn shoppingcart-active-btn light-btn" href="#" title="Ваша корзина">
+            <a href="#" class="signin-btn light-btn">Вход</a>
+
+            <form class="usernav-signin-form" action="https://echo.htmlacademy.ru" method="post">
+
+              <label class="visually-hidden" for="signin-useremail-id">Электронная почта</label>
+              <input type="email" name="signin-useremail" id="signin-useremail-id" placeholder="Электронная почта">
+
+              <label class="visually-hidden" for="signin-userpassword-id">Пароль</label>
+              <input type="password" name="signin-userpassword" id="signin-userpassword-id" placeholder="Пароль">
+
+              <button class="signin-submit-btn bright-btn" type="submit">Войти</button>
+
+              <a href="#" class="usernav-signin-link recovery-link">Забыли пароль?</a>
+              <a href="#" class="usernav-signin-link signup-link">Новая регистрация</a>
+
+            </form>
+
+            <a class="shoppingcart-btn shoppingcart-active-btn light-btn" href="#">
+              <span class="visually-hidden">Корзина</span>
               <span class="shoppingcart-status">2 товара</span>
             </a>
 
             <section class="shoppingcart">
-              <h2 class="visually-hidden">Корзина</h2>
+              <h2 class="visually-hidden">Ваша корзина</h2>
 
               <table class="shoppingcart-table">
                 <tr class="cart-item">
 
                   <td>
-                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">x</a>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">Убрать товар из корзины</a>
                   </td>
 
                   <td>
@@ -87,7 +98,7 @@
                 <tr class="cart-item">
 
                   <td>
-                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">x</a>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">Убрать товар из корзины</a>
                   </td>
 
                   <td>
@@ -119,7 +130,7 @@
                 руб.
               </p>
 
-              <a class="order-btn bright-btn" href="#" title="Оформить заказ">Оформить заказ</a>
+              <a class="order-btn bright-btn" href="#">Оформить заказ</a>
 
             </section> <!-- .shoppingcart -->
 
@@ -146,15 +157,15 @@
 
         <ul class="breadcrumbs">
           <li>
-            <a href="index.html" title="На главную">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
 
           <li>
-            <a href="#" title="Перейти в каталог">Каталог</a>
+            <a href="#">Каталог</a>
           </li>
 
           <li>
-            <a href="#" title="Перейти к сливочному">Сливочное</a>
+            <a href="#">Сливочное</a>
           </li>
 
         </ul> <!-- .breadcrumbs -->
@@ -163,10 +174,10 @@
 
       <h1>Сливочное мороженое</h1>
 
-      <!-- Эту форму не смогла заккоментировать из-за комментариев внутри -->
       <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="post">
 
         <fieldset class="fieldset-top">
+          <legend class="visually-hidden">Фильтры мороженного</legend>
 
           <div class="filter-sortdirection">
 
@@ -184,13 +195,21 @@
 
           <div class="filter-pricerange">
 
-            <p class="pricerange-label">
-              Цена: от
-              <span class="price-from">100</span>
-              руб. –
-              <span class="price-to">500</span>
-              руб.
-            </p>
+            <fieldset class="pricerange-inputs">
+              <legend>Цена:</legend>
+
+              <label for="price-from-id">от</label>
+              <input class="pricerange-pricefrom" type="number" name="price-from" id="price-from-id" value="100">
+
+              <span>руб. –</span>
+
+              <label class="visually-hidden" for="price-to-id">до</label>
+              <input class="pricerange-priceto" type="number" name="price-to" id="price-to-id" value="500">
+
+              <span>руб.</span>
+
+            </fieldset> <!-- .pricerange-inputs-->
+
 
             <div class="pricerange-block">
 
@@ -231,7 +250,7 @@
         </fieldset> <!-- .fieldset-top -->
 
 
-        <fieldset class="fieldset-bottom">
+        <div class="fieldset-bottom">
 
           <fieldset class="filter-fillers">
 
@@ -239,20 +258,20 @@
 
             <div class="fillers-inputs">
 
-              <input type="checkbox" id="filler-chocolate-id" name="filler-chocolate" checked>
-              <label for="filler-chocolate-id">Шоколадные</label>
+              <input type="checkbox" name="fillers-chocolate" id="fillers-chocolate-id" checked>
+              <label for="fillers-chocolate-id">Шоколадные</label>
 
-              <input type="checkbox" id="filler-sugar-id" name="filler-sugar" checked>
-              <label for="filler-sugar-id">Сахарные присыпки</label>
+              <input type="checkbox" name="fillers-sugar" id="fillers-sugar-id" checked>
+              <label for="fillers-sugar-id">Сахарные присыпки</label>
 
-              <input type="checkbox" id="filler-fruits-id" name="filler-fruits">
-              <label for="filler-fruits-id">Фрукты</label>
+              <input type="checkbox" name="fillers-fruits" id="fillers-fruits-id">
+              <label for="fillers-fruits-id">Фрукты</label>
 
-              <input type="checkbox" id="filler-syrops-id" name="filler-syrops">
-              <label for="filler-syrops-id">Сиропы</label>
+              <input type="checkbox" name="fillers-syrops" id="fillers-syrops-id">
+              <label for="fillers-syrops-id">Сиропы</label>
 
-              <input type="checkbox" id="filler-jams-id" name="filler-jams">
-              <label for="filler-jams-id">Джемы</label>
+              <input type="checkbox" name="fillers-jams" id="fillers-jams-id">
+              <label for="fillers-jams-id">Джемы</label>
 
             </div> <!-- .fillers-inputs -->
 
@@ -260,7 +279,7 @@
 
           <button class="filter-submit-btn light-btn" type="submit">Применить</button>
 
-        </fieldset> <!-- .fieldset-bottom -->
+        </div> <!-- .fieldset-bottom -->
 
       </form> <!-- .catalog-filter -->
 
@@ -503,16 +522,16 @@
       </section> <!-- .catalog-items -->
 
       <section class="pagination">
-        <h2 class="visually-hidden">Постраничная навигация</h2>
+        <h2 class="visually-hidden">Постраничная навигация каталога</h2>
 
         <ul class="pagination-list">
-          <li><a class="pagination-prev pagination-inactive">&lt;</a>
+          <li><a class="pagination-prev pagination-inactive">Предыдущая страница</a>
           <li><a class="pagination-current">1</a>
           <li><a href="#">2</a>
           <li><a href="#">3</a>
           <li><a href="#">4</a>
           <li><a href="#">5</a>
-          <li><a class="pagination-next" href="#">&gt;</a>
+          <li><a class="pagination-next" href="#">Следующая страница</a>
         </ul>
 
       </section> <!-- .pagination -->
@@ -529,16 +548,16 @@
 
             <ul class="socials-list">
               <li>
-                <a class="social-btn tw-btn light-btn" href="#" title="Открыть нашу страницу в Twitter">Twitter</a>
+                <a class="social-btn tw-btn light-btn" href="#">Twitter</a>
               </li>
               <li>
-                <a class="social-btn inst-btn light-btn" href="#" title="Открыть нашу страницу в Instagram">Instagram</a>
+                <a class="social-btn inst-btn light-btn" href="#">Instagram</a>
               </li>
               <li>
-                <a class="social-btn fb-btn light-btn" href="#" title="Открыть нашу страницу в Facebook">Facebook</a>
+                <a class="social-btn fb-btn light-btn" href="#">Facebook</a>
               </li>
               <li>
-                <a class="social-btn vk-btn light-btn" href="#" title="Открыть нашу страницу в Вконтакте">Вконтакте</a>
+                <a class="social-btn vk-btn light-btn" href="#">Вконтакте</a>
               </li>
             </ul>
 
@@ -549,10 +568,10 @@
           <h2 class="visually-hidden">Дополнительная информация</h2>
 
           <ul class="additional-links-list">
-            <li><a href="#" title="Подробнее">Для поставщиков</a></li>
-            <li><a href="#" title="Подробнее">О производстве</a></li>
-            <li><a href="#" title="Подробнее">Наши документы</a></li>
-            <li><a href="#" title="Подробнее">Экологические стандарты</a></li>
+            <li><a href="#">Для поставщиков</a></li>
+            <li><a href="#">О производстве</a></li>
+            <li><a href="#">Наши документы</a></li>
+            <li><a href="#">Экологические стандарты</a></li>
           </ul>
         </section> <!-- .additional-links -->
 
@@ -566,7 +585,7 @@
 
           <p class="copyright-text">
             Сделано в
-            <a class="copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Академия">HTML Academy</a>
+            <a class="copyright-text-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
             &copy; 2017
           </p>
 
