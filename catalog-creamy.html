@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -18,33 +21,40 @@
           </a>
 
           <ul class="site-navigation">
+
             <li><a class="sitenav-catalog active-page" href="#">Каталог</a>
 
               <ul class="catalog-submenu">
-                <li><a class="submenu-newproducts" href="#">Новинки</a></li>
+                <li class="submenu-newproducts"><a href="#">Новинки</a></li>
                 <li><a class="active-page">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
-              </ul> <!-- .catalog-sub-menu -->
+              </ul> <!-- .catalog-submenu -->
+
             </li> <!-- .catalog -->
 
             <li><a href="#">Доставка и оплата</a></li>
             <li><a href="#">О Компании</a></li>
-          </ul>
+
+          </ul> <!-- .site-navigation -->
 
 
           <div class="user-navigation">
-            <a href="#" class="search-btn light-btn">Поиск</a>
+            <a href="#" class="search-btn">
+              <span class="visually-hidden">Поиск</span>
 
-            <form class="usernav-search-form" action="https://echo.htmlacademy.ru" method="get">
+            <span class="visually-hidden"></span>
+          </a>
+
+            <form class="usernav-search-form placeholder-allpagesform" action="https://echo.htmlacademy.ru" method="get">
               <label class="visually-hidden" for="site-search-id">Поиск товаров по сайту</label>
               <input type="search" name="site-search" id="site-search-id" placeholder="Что ищем?">
             </form>
 
-            <a href="#" class="signin-btn light-btn">Вход</a>
+            <a href="#" class="signin-btn">Вход</a>
 
-            <form class="usernav-signin-form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="usernav-signin-form placeholder-allpagesform" action="https://echo.htmlacademy.ru" method="post">
 
               <label class="visually-hidden" for="signin-useremail-id">Электронная почта</label>
               <input type="email" name="signin-useremail" id="signin-useremail-id" placeholder="Электронная почта">
@@ -52,26 +62,28 @@
               <label class="visually-hidden" for="signin-userpassword-id">Пароль</label>
               <input type="password" name="signin-userpassword" id="signin-userpassword-id" placeholder="Пароль">
 
-              <button class="signin-submit-btn bright-btn" type="submit">Войти</button>
+              <button class="signin-submit-btn bright-btn btn" type="submit">Войти</button>
 
               <a href="#" class="usernav-signin-link recovery-link">Забыли пароль?</a>
               <a href="#" class="usernav-signin-link signup-link">Новая регистрация</a>
 
             </form>
 
-            <a class="shoppingcart-btn shoppingcart-active-btn light-btn" href="#">
+            <a class="shoppingcart-btn shoppingcart-active-btn" href="#">
               <span class="visually-hidden">Корзина</span>
               <span class="shoppingcart-status">2 товара</span>
             </a>
 
-            <section class="shoppingcart">
+            <section class="usernav-shoppingcart">
               <h2 class="visually-hidden">Ваша корзина</h2>
 
               <table class="shoppingcart-table">
                 <tr class="cart-item">
 
                   <td>
-                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">Убрать товар из корзины</a>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">
+                      <span class="visually-hidden">Убрать товар из корзины</span>
+                    </a>
                   </td>
 
                   <td>
@@ -81,7 +93,7 @@
                   <td>
                     <p class="cartitem-orderinfo">
                       1,5 кг х
-                      <span class="item-price">200</span>
+                      <span class="cartitem-price">200</span>
                       руб.
                     </p>
                   </td>
@@ -98,7 +110,9 @@
                 <tr class="cart-item">
 
                   <td>
-                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">Убрать товар из корзины</a>
+                    <a class="cartitem-remove-btn" href="#" title="Убрать товар из корзины">
+                      <span class="visually-hidden">Убрать товар из корзины</span>
+                    </a>
                   </td>
 
                   <td>
@@ -150,7 +164,7 @@
 
     <!-- ...............................................ОСНОВНОЕ СОДЕРЖАНИЕ............................................... -->
 
-    <main class="container">
+    <main class="innerpage-catalogcreamy container">
 
       <section class="breadcrumbs-block">
         <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -183,7 +197,7 @@
 
             <label for="sorting-direction-id">Сортировка:</label>
 
-            <select name="sorting-direction" id="sorting-direction-id">
+            <select class="sorting-direction" name="sorting-direction" id="sorting-direction-id">
               <option value="popular-first" selected>По популярности</option>
               <option value="cheap-first">Сначала недорогие</option>
               <option value="expensive-first">Сначала дорогие</option>
@@ -196,9 +210,10 @@
           <div class="filter-pricerange">
 
             <fieldset class="pricerange-inputs">
+
               <legend>Цена:</legend>
 
-              <label for="price-from-id">от</label>
+              <label class="visually-hidden" for="price-from-id">от</label>
               <input class="pricerange-pricefrom" type="number" name="price-from" id="price-from-id" value="100">
 
               <span>руб. –</span>
@@ -277,7 +292,7 @@
 
           </fieldset> <!-- .filter-fillers -->
 
-          <button class="filter-submit-btn light-btn" type="submit">Применить</button>
+          <button class="filter-submit-btn btn" type="submit">Применить</button>
 
         </div> <!-- .fieldset-bottom -->
 
@@ -297,7 +312,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">310</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -316,7 +332,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">380</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -335,7 +352,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">355</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -354,7 +372,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">415</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -373,7 +392,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">325</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -392,7 +412,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">410</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -411,7 +432,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">375</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -430,7 +452,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">320</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -449,7 +472,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">440</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -468,7 +492,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">435</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -487,7 +512,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">355</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -506,7 +532,8 @@
 
             <p class="item-price">
               <span class="item-pricenumber">420</span>
-              <span class="item-measure">&#8381;/кг</span>
+              <span>&#8381;</span>
+              <span class="item-measure">/кг</span>
             </p>
 
             <h3>
@@ -525,14 +552,38 @@
         <h2 class="visually-hidden">Постраничная навигация каталога</h2>
 
         <ul class="pagination-list">
-          <li><a class="pagination-prev pagination-inactive">Предыдущая страница</a>
-          <li><a class="pagination-current">1</a>
-          <li><a href="#">2</a>
-          <li><a href="#">3</a>
-          <li><a href="#">4</a>
-          <li><a href="#">5</a>
-          <li><a class="pagination-next" href="#">Следующая страница</a>
-        </ul>
+          <li>
+            <a class="pagination-prev pagination-disabled">
+              <span class="visually-hidden">Предыдущая страница</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="pagination-active">1</a>
+          </li>
+
+          <li>
+            <a href="#">2</a>
+          </li>
+
+          <li>
+            <a href="#">3</a>
+          </li>
+
+          <li>
+            <a href="#">4</a>
+          </li>
+
+          <li>
+            <a href="#">5</a>
+          </li>
+
+          <li>
+            <a class="pagination-next" href="#">
+              <span class="visually-hidden">Следующая страница</span>
+            </a>
+          </li>
+        </ul> <!-- .pagination-list -->
 
       </section> <!-- .pagination -->
 
@@ -548,18 +599,30 @@
 
             <ul class="socials-list">
               <li>
-                <a class="social-btn tw-btn light-btn" href="#">Twitter</a>
+                <a class="social-btn tw-btn" href="#">
+                  <span class="visually-hidden">Twitter</span>
+                </a>
               </li>
+
               <li>
-                <a class="social-btn inst-btn light-btn" href="#">Instagram</a>
+                <a class="social-btn inst-btn" href="#">
+                  <span class="visually-hidden">Instagram</span>
+                </a>
               </li>
+
               <li>
-                <a class="social-btn fb-btn light-btn" href="#">Facebook</a>
+                <a class="social-btn fb-btn" href="#">
+                  <span class="visually-hidden">Facebook</span>
+                </a>
               </li>
+
               <li>
-                <a class="social-btn vk-btn light-btn" href="#">Вконтакте</a>
+                <a class="social-btn vk-btn" href="#">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
               </li>
-            </ul>
+
+            </ul> <!-- .socials-list -->
 
         </section> <!-- .socials -->
 
@@ -568,7 +631,7 @@
           <h2 class="visually-hidden">Дополнительная информация</h2>
 
           <ul class="additional-links-list">
-            <li><a href="#">Для поставщиков</a></li>
+            <li><a class="additional-links-provider" href="#">Для поставщиков</a></li>
             <li><a href="#">О производстве</a></li>
             <li><a href="#">Наши документы</a></li>
             <li><a href="#">Экологические стандарты</a></li>
